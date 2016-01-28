@@ -11,11 +11,17 @@ const {
 
 class App extends React.Component {
 
+  // <editor-fold desc="DefaultProps" defaultstate="collapsed">
+
   static defaultProps = {
     ...React.Component.defaultProps,
     date: new Date(),
     timeZoneOffsetInHours: (-1) * (new Date()).getTimezoneOffset() / 60,
   };
+
+  // </editor-fold>
+
+  // <editor-fold desc="Constructor" defaultstate="collapsed">
 
   constructor(props, context) {
     super(props, context);
@@ -27,7 +33,11 @@ class App extends React.Component {
     };
   }
 
-  pressButton() {
+  // </editor-fold>
+
+  // <editor-fold desc="Events" defaultstate="collapsed">
+
+  pressButton = () => {
     let alertMessage = 'Credibly reintermediate next-generation potentialities after goal-oriented catalysts for change. ' +
       'Dynamically revolutionize.';
 
@@ -38,10 +48,14 @@ class App extends React.Component {
     this.setState({date: date});
   }
 
+  // </editor-fold>
+
+  // <editor-fold desc="Render" defaultstate="collapsed">
+
   render() {
     return (
       <View style={AppStyles.container}>
-        <Button onPress={() => this.pressButton()}>Press Me</Button>
+        <Button onPress={this.pressButton}>Press Me</Button>
         <DatePickerIOS
             date={this.state.date}
             mode="time"
@@ -50,6 +64,8 @@ class App extends React.Component {
       </View>
     );
   }
+
+  // </editor-fold>
 }
 
 export default App;
