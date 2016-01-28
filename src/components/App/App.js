@@ -35,7 +35,7 @@ class App extends React.Component {
   }
 
   onDateChange(date) {
-    this.setState({date});
+    this.setState({date: date});
   }
 
   render() {
@@ -45,7 +45,7 @@ class App extends React.Component {
         <DatePickerIOS
             date={this.state.date}
             mode="time"
-            onDateChange={this.onDateChange}
+            onDateChange={(date) => this.onDateChange(date)}
         />
       </View>
     );
