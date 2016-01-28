@@ -34,7 +34,7 @@ class App extends React.Component {
     AlertIOS.alert('Alert Title', alertMessage);
   }
 
-  onDateChange(date) {
+  onDateChange = (date) => {
     this.setState({date: date});
   }
 
@@ -45,7 +45,7 @@ class App extends React.Component {
         <DatePickerIOS
             date={this.state.date}
             mode="time"
-            onDateChange={(date) => this.onDateChange(date)}
+            onDateChange={this.onDateChange}
         />
       </View>
     );
