@@ -35,7 +35,7 @@ class App extends React.Component {
   }
 
   onDateChange(date) {
-    this.setState({date: date});
+    this.setState({date});
   }
 
   render() {
@@ -43,9 +43,9 @@ class App extends React.Component {
       <View style={AppStyles.container}>
         <Button onPress={this.pressButton}>Press Me</Button>
         <DatePickerIOS
-          date={this.state.date}
-          mode="time"
-          onDateChange={(date) => this.onDateChange(date)}
+            date={this.state.date}
+            mode="time"
+            onDateChange={this.onDateChange}
         />
       </View>
     );
