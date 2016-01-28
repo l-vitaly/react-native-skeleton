@@ -41,7 +41,7 @@ class App extends React.Component {
   render() {
     return (
       <View style={AppStyles.container}>
-        <Button onPress={this.pressButton}>Press Me</Button>
+        <Button onPress={() => this.pressButton()}>Press Me</Button>
         <DatePickerIOS
             date={this.state.date}
             mode="time"
