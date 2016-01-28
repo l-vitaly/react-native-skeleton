@@ -35,7 +35,7 @@ class App extends React.Component {
   }
 
   onDateChange(date) {
-    this.setState({date: date});
+    this.state.date = date;
   }
 
   render() {

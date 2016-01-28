@@ -6,7 +6,7 @@ export let AppStyles = React.StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-    paddingTop: 30
+    paddingTop: 30,
   },
   welcome: {
     fontSize: 20,
@@ -20,6 +20,6 @@ export let AppStyles = React.StyleSheet.create({
   },
   wrapper: {
     borderRadius: 5,
-    marginBottom: 5
+    marginBottom: 5,
   },
 });

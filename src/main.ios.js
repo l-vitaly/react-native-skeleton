@@ -3,7 +3,7 @@ import App from './components/App/App';
 
 class Root extends App {
   static defaultProps = {
-    ...App.defaultProps
+    ...App.defaultProps,
   };
 }
 
